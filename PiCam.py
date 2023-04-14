@@ -20,7 +20,7 @@ Camera.start()
 
 StartTime = int(time.strftime("%H"))
 directory = StartTime 
-parentDir = os.path.dirname(os.path.realpath(__file__))+"/LiveImages"
+parentDir = os.path.dirname(os.path.realpath(__file__))+"/commands/image"
 LocalTime = (time.strftime("%a %b %d")).lower()
 
 time.sleep(2)
