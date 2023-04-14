@@ -15,7 +15,7 @@ ImgTime = config.get('DEFAULT', 'imgtime')
 Camera = Picamera2()
 CameraConfig = Camera.create_preview_configuration()
 Camera.configure(CameraConfig)
-Camera.start_preview(Preview.QTGL)
+# Camera.start_preview(Preview.QTGL)
 Camera.start()
 
 StartTime = int(time.strftime("%H"))
@@ -51,4 +51,5 @@ while LocalTime != SetDate:
     # waits set amount of time
     time.sleep(ImgTime)
 
-    
+
+Camera.stop()
