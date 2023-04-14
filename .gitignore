@@ -1,3 +1,6 @@
 .env
 node_modules
 github-push.txt
+commands/image/*.jpg
+commands/image/*.png
+commands/image/*.jpeg
