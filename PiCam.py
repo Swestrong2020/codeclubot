@@ -1,8 +1,15 @@
 from picamera2 import Picamera2, Preview
 import time
 import os
+import configparser
 
-ImgTime = 600 #time between photos in seconds
+#opens configPiCam.env
+config = configparser.ConfigParser()
+config.read('configPiCam.env')
+
+
+SetDate = config.get('DEFAULT', 'setdate')
+ImgTime = config.get('DEFAULT', 'imgtime')
 
 #starts camera
 Camera = Picamera2()
@@ -16,11 +23,8 @@ directory = StartTime
 parentDir = os.path.dirname(os.path.realpath(__file__))+"/LiveImages"
 LocalTime = (time.strftime("%a %b %d")).lower()
 
-time.wait(2)
+time.sleep(2)
 
-#askeds for input
-print("Give a data using the folowing format: Mon Apr 17")
-SetDate = input().lower
 
 while LocalTime != SetDate:
 
