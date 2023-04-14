@@ -11,10 +11,9 @@ Camera.configure(CameraConfig)
 Camera.start_preview(Preview.QTGL)
 Camera.start()
 
-
 StartTime = int(time.strftime("%H"))
 directory = StartTime 
-parentDir = os.path.dirname(os.path.realpath(__file__))
+parentDir = os.path.dirname(os.path.realpath(__file__))+"/LiveImages"
 LocalTime = (time.strftime("%a %b %d")).lower()
 
 time.wait(2)
